@@ -3,7 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33213.308
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WorkOne", "WorkOne\WorkOne.csproj", "{5479E9ED-31C1-4F30-87EC-5254781C9B0B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WorkOne", "WorkOne\WorkOne.csproj", "{5479E9ED-31C1-4F30-87EC-5254781C9B0B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{AD9F8B84-8FD0-45EB-88D1-F4191F756276}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain", "Domain\Domain.csproj", "{9C87F912-1A25-4B05-A8AA-10980F255042}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DbAccess.EFCore", "DbAccess.EFCore\DbAccess.EFCore.csproj", "{173A6CC5-177B-428C-A655-4DDD36948F79}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,9 +21,21 @@ Global
 		{5479E9ED-31C1-4F30-87EC-5254781C9B0B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5479E9ED-31C1-4F30-87EC-5254781C9B0B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5479E9ED-31C1-4F30-87EC-5254781C9B0B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9C87F912-1A25-4B05-A8AA-10980F255042}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9C87F912-1A25-4B05-A8AA-10980F255042}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9C87F912-1A25-4B05-A8AA-10980F255042}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9C87F912-1A25-4B05-A8AA-10980F255042}.Release|Any CPU.Build.0 = Release|Any CPU
+		{173A6CC5-177B-428C-A655-4DDD36948F79}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{173A6CC5-177B-428C-A655-4DDD36948F79}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{173A6CC5-177B-428C-A655-4DDD36948F79}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{173A6CC5-177B-428C-A655-4DDD36948F79}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{9C87F912-1A25-4B05-A8AA-10980F255042} = {AD9F8B84-8FD0-45EB-88D1-F4191F756276}
+		{173A6CC5-177B-428C-A655-4DDD36948F79} = {AD9F8B84-8FD0-45EB-88D1-F4191F756276}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {847F413A-84E2-44E7-BBBF-C6902ACB1D86}
