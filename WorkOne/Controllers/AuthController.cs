@@ -10,9 +10,9 @@ namespace WorkOne.Controllers
     [ApiController]
     public class AuthController : ControllerBase
     {
-        private readonly UserService _userService;
+        private readonly IUserService _userService;
 
-        public AuthController(UserService userService)
+        public AuthController(IUserService userService)
         {
             _userService = userService;
         }
@@ -21,18 +21,14 @@ namespace WorkOne.Controllers
         [HttpPost("register")]
         public async Task<IActionResult> Post([FromBody] RegisterUserModel modal)
         {
-            if(ModelState.IsValid)
+            try
             {
-                try
-                {
-                    return new JsonResult(await _userService.Register(modal));
-                }
-                catch (Exception ex)
-                {
-                    return new JsonResult(ex);
-                }
+                return new JsonResult(await _userService.Register(modal));
             }
-            return BadRequest(ModelState);
+            catch (Exception ex)
+            {
+                return new JsonResult(ex);
+            }
         }
     }
 }

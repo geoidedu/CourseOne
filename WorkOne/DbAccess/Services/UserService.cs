@@ -11,9 +11,9 @@ namespace WorkOne.DbAccess.Services
 
     public class UserService : IUserService
     {
-        private UserRepository _repository;
+        private IUserRepository _repository;
 
-        public UserService(UserRepository repository)
+        public UserService(IUserRepository repository)
         {
             _repository = repository;
         }

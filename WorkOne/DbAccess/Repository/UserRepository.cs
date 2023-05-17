@@ -26,9 +26,9 @@ namespace WorkOne.DbAccess.Repository
         /// </summary>
         /// <param name="Id"></param>
         /// <returns></returns>
-        public async Task<AppUser> GetByName(string email)
+        public async Task<AppUser?> GetByName(string email)
         {
-            return await _context.AppUsers.Where(o => o.Name == email).FirstAsync();
+            return await _context.AppUsers.Where(o => o.Name == email).FirstOrDefaultAsync();
         }
 
 
